@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class Tictactoe_game():
+class TictactoeGame:
     def __init__(self):
         self.state = np.array([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
         self.player_name = ["Player 1", "Player 2"]
@@ -20,7 +20,6 @@ class Tictactoe_game():
             self.next_to_move *= -1    # advance the game to the next move
         else:   # can't make a move on filled field
             print("This move is invalid.")
-
 
     def is_winning_move(self, row, column):
         # winning on row todo
