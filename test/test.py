@@ -1,7 +1,46 @@
+import numpy as np
 import src.main
+from src.infrastructure import Tictactoe_game
 
 
-def test_my_tictactoe():
-    output = "somestring"
-    expected_output = "somestring"
-    assert output == expected_output
+def test_game_initialization():
+    my_game = Tictactoe_game()
+    assert my_game.game_state == np.array([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+    assert my_game.game_over == False
+
+
+def test_game_simple_player_1_wins():
+    my_game = Tictactoe_game()
+    my_game.move(1,1)    # player 01
+    my_game.move(2,1)    # player 02
+    my_game.move(1,2)    # player 01
+    my_game.move(3,2)    # player 02
+    my_game.move(1,3)    # player 01 wins
+    assert my_game.game_state == np.array([[1, 1, 1], [-1, 0, 0], [0, -1, 0]])
+    assert my_game.game_over
+    assert my_game.winner == "Player 1"
+
+
+def test_game_player_1_wins_before_final_move():
+    my_game = Tictactoe_game()
+    my_game.move(1, 1)    # player 01
+    my_game.move(2, 1)    # player 02
+    my_game.move(1, 3)    # player 01
+    my_game.move(1, 2)    # player 02
+    my_game.move(3, 3)    # player 01 wins
+    assert my_game.game_state == np.array([[1, -1, 1], [-1, 0, 0], [0, 0, 1]])
+    assert my_game.game_over
+    assert my_game.winner == "Player 1"
+
+
+def test_game_player_2_wins():
+    my_game = Tictactoe_game()
+    my_game.move(1, 2)    # player 01
+    my_game.move(1, 1)    # player 02
+    my_game.move(1, 3)    # player 01
+    my_game.move(2, 2)    # player 02
+    my_game.move(2, 3)    # player 01
+    my_game.move(3, 3)    # player 02 wins
+    assert my_game.game_state == np.array([[-1, 1, 1], [0, -1, 1], [0, 0, -1]])
+    assert my_game.game_over
+    assert my_game.winner == "Player 2"

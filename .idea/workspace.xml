@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="Basic folder structure and creation of initial files">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="__init__ method and make_make method for Tictactoe game infrastructure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infrastructure.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721395594115</updated>
       <workItem from="1721395599657" duration="1810000" />
-      <workItem from="1721397465555" duration="2810000" />
+      <workItem from="1721397465555" duration="5157000" />
     </task>
     <task id="LOCAL-00001" summary="Basic folder structure and creation of initial files">
       <option name="closed" value="true" />
@@ -94,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721397328817</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="__init__ method and make_make method for Tictactoe game infrastructure">
+      <option name="closed" value="true" />
+      <created>1721417930983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721417930983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +108,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic folder structure and creation of initial files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic folder structure and creation of initial files" />
+    <MESSAGE value="__init__ method and make_make method for Tictactoe game infrastructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="__init__ method and make_make method for Tictactoe game infrastructure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
