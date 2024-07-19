@@ -19,7 +19,7 @@ class TictactoeGame:
         if self.game_over:    # can't make a move after the game ended
             print("This game is already decided. You can't play anymore.")
         elif self.state[row, column] == 0:    # check if the field is empty
-            self.state[row, column] = self.next_to_move    # update the gamestate
+            self.state[row, column] = self.next_to_move    # update the game state
             if self.is_winning_move(row, column):
                 self.winner = self.player_name[self.next_to_move]
                 print("Congratulations! {} wins!".format(self.winner))
