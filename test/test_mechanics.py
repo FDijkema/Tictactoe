@@ -43,3 +43,6 @@ def test_game_player_2_wins():
     assert np.array_equal(my_game.state, np.array([[-1, 1, 1], [0, -1, 1], [0, 0, -1]]))
     assert my_game.game_over
     assert my_game.winner == "Player 2"
+
+def test_invalid_move():
+    # todo: add a test to check if invalid moves are processed correctly

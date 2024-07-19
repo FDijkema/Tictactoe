@@ -12,6 +12,8 @@ class Tictactoe_game():
     def move(self, row, column):
         if self.game_over:    # can't make a move after the game ended
             print("This game is already decided. You can't play anymore.")
+        elif:    # invalid move todo
+
         else:   # the game is still undecided, make the move
             self.state[row, column] = self.next_to_move    # update the gamestate
             if self.is_winning_move(row, column):
@@ -20,6 +22,10 @@ class Tictactoe_game():
             self.next_to_move *= -1    # advance the game to the next move
 
     def is_winning_move(self, row, column):
+        # winning on row todo
+        # winning on column todo
+        # winning on diagonal todo
+        # winning by no more moves to make todo
         self.game_over = True
         return True
 
