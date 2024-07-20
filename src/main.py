@@ -64,14 +64,17 @@ def draw_circle(row, column):
 
 def draw_cross(row, column):
     print("cross drawn")
+    # line 1
     line1_start_x = 3 * margin + 200 * column
     line1_start_y = top_of_board + 3 * margin + 200 * row
     line1_end_x = 200 * column + 200 - 3 * margin
     line1_end_y = top_of_board + 200 * row + 200 - 3 * margin
+    # line 2
     line2_start_x = 3 * margin + 200 * column
     line2_start_y = top_of_board + 200 * row + 200 - 3 * margin
     line2_end_x = 200 * column + 200 - 3 * margin
     line2_end_y = top_of_board + 3 * margin + 200 * row
+    # draw
     pygame.draw.line(screen, "wheat4", (line1_start_x, line1_start_y), (line1_end_x, line1_end_y), 15)
     pygame.draw.line(screen, "wheat4", (line2_start_x, line2_start_y), (line2_end_x, line2_end_y), 15)
 
