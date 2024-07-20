@@ -37,7 +37,7 @@ class TictactoeGame:
         move(row: int, column: int):
             advances the game by placing the symbol of the player who is next to move on the board
             at the indicated row and column
-            row and column index starts from 1
+            row and column index starts from 0
             updates class attributes accordingly if the game has ended in win or draw
         """
     def __init__(self):
@@ -59,18 +59,15 @@ class TictactoeGame:
         Parameters
         ----------
         row: int
-            row index where the player will move (base 1)
+            row index where the player will move (base 0)
         column: int
-            column index where the player will move (base 1)
+            column index where the player will move (base 0)
         """
-        if not (row in [1, 2, 3] and column in [1, 2, 3]):    # make sure the move fits on the board
+        if not (row in [0, 1, 2] and column in [0, 1, 2]):    # make sure the move fits on the board
             raise IndexError("Your move does not fit on the Tictactoe board."
                              "Make sure row and column indices are between 1 and 3.")
-        # convert to 0-base indexing
-        row = row - 1
-        column = column - 1
         if self.game_over:    # can't make a move after the game ended
-            raise Exception("This game is already decided. You can't play anymore.")
+            raise GameOverError("This game is already decided. You can't play anymore.")
         elif self.state[row, column] == 0:    # check if the field is empty
             self.state[row, column] = self.next_to_move    # place player symbol in the right field
             self.number_of_moves += 1
@@ -114,3 +111,7 @@ class TictactoeGame:
         #    return True    # also signal that the game has been won already
         else:
             return False
+
+
+class GameOverError(Exception):
+    pass

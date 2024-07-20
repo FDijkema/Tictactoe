@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="Test that invalid move raises ValueError">
-      <change beforePath="$PROJECT_DIR$/test/test_mechanics.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_mechanics.py" afterDir="false" />
+    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="add_custom_errors" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,32 +49,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_mechanics.test_invalid_move.executor": "Run",
-    "Python tests.Python tests in test.executor": "Run",
-    "Python tests.Python tests in test_infrastructure.executor": "Run",
-    "Python.scratch.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.tictactoe_mechanics.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "add__custom__errors",
-    "last_opened_file_path": "D:/Fenne/PycharmProjects/Tictactoe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_mechanics.test_invalid_move.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_infrastructure.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tictactoe_mechanics.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#3 on UI&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Fenne/PycharmProjects/Tictactoe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Python tests.Python tests in test">
+}</component>
+  <component name="RunManager">
     <configuration name="Python tests for test_mechanics.test_invalid_move" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -108,9 +110,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test" />
-        <item itemvalue="Python tests.Python tests in test" />
         <item itemvalue="Python tests.Python tests for test_mechanics.test_invalid_move" />
+        <item itemvalue="Python tests.Python tests in test" />
+        <item itemvalue="Python tests.Python tests in test" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +135,9 @@
       <workItem from="1721395599657" duration="1810000" />
       <workItem from="1721397465555" duration="12675000" />
       <workItem from="1721461803834" duration="4916000" />
+      <workItem from="1721486128767" duration="409000" />
+      <workItem from="1721490378146" duration="2856000" />
+      <workItem from="1721502525738" duration="1866000" />
     </task>
     <task id="LOCAL-00001" summary="Basic folder structure and creation of initial files">
       <option name="closed" value="true" />
@@ -310,7 +315,151 @@
       <option name="project" value="LOCAL" />
       <updated>1721470778711</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Test that invalid move with too high row and column values raises IndexError">
+      <option name="closed" value="true" />
+      <created>1721470880600</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1721470880600</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Initial game loop with very basic functionality. Screen is created and can be closed. New game function is triggered. Mouseclick is registered and triggers function to make a move.">
+      <option name="closed" value="true" />
+      <created>1721473446575</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1721473446575</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Display background is the right color">
+      <option name="closed" value="true" />
+      <created>1721473946796</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1721473946796</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Header box and welcome text">
+      <option name="closed" value="true" />
+      <created>1721479193652</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721479193652</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Background with game board created">
+      <option name="closed" value="true" />
+      <created>1721480061648</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1721480061648</updated>
+    </task>
+    <task id="LOCAL-00028" summary="registration of row and column clicked">
+      <option name="closed" value="true" />
+      <created>1721480826457</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1721480826457</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Converted to index starting from 0">
+      <option name="closed" value="true" />
+      <created>1721481054744</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1721481054744</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Move only triggers when clicked on the board, not when header rectangle is clicked">
+      <option name="closed" value="true" />
+      <created>1721481805696</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1721481805696</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Detects game over and starts new game immediately">
+      <option name="closed" value="true" />
+      <created>1721482243376</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1721482243376</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Raises custom GameOverError when player tries to move after the game is already decided">
+      <option name="closed" value="true" />
+      <created>1721483746344</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1721483746344</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Go back and forth between drawing circles and crosses">
+      <option name="closed" value="true" />
+      <created>1721484202406</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1721484202406</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Draws a circle">
+      <option name="closed" value="true" />
+      <created>1721484652798</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1721484652798</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Draws a cross for player 2">
+      <option name="closed" value="true" />
+      <created>1721485159690</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1721485159690</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Working base game.">
+      <option name="closed" value="true" />
+      <created>1721485211766</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1721485211766</updated>
+    </task>
+    <task id="LOCAL-00037" summary="added some comments">
+      <option name="closed" value="true" />
+      <created>1721485358471</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1721485358471</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Minor improvements">
+      <option name="closed" value="true" />
+      <created>1721485966718</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1721485966718</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fixed test for move after end of game.">
+      <option name="closed" value="true" />
+      <created>1721486510459</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1721486510459</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Starts new game after game over and displays full screen message to inform user">
+      <option name="closed" value="true" />
+      <created>1721493249258</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1721493249258</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,20 +478,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Basic folder structure and creation of initial files" />
-    <MESSAGE value="__init__ method and make_make method for Tictactoe game infrastructure" />
-    <MESSAGE value="Infrastructure tests" />
-    <MESSAGE value="proper comparison of np.arrays in tests" />
-    <MESSAGE value="changed names for clarity" />
-    <MESSAGE value="added todos for needed features" />
-    <MESSAGE value="check for empty field, otherwise invalid move" />
-    <MESSAGE value="changed TictactoeGame class name to be consistent with naming conventions" />
-    <MESSAGE value="working basic gameplay" />
-    <MESSAGE value="commented out test for win in next round for now, since not yet implemented" />
-    <MESSAGE value="spelling improvement in comment" />
-    <MESSAGE value="Slight improvement in message for invalid move" />
-    <MESSAGE value="Test for invalid move" />
-    <MESSAGE value="Todos for a test to check undecided game" />
     <MESSAGE value="test for a game that ends undecided" />
     <MESSAGE value="Changed winner of draw to &quot;Draw&quot; instead of None for more consistent behaviour" />
     <MESSAGE value="Game ends in draw after maximum number of moves has been made without a winner" />
@@ -350,22 +485,31 @@
     <MESSAGE value="Fixed indexing mistake" />
     <MESSAGE value="Test that exception is raised for move after end of game" />
     <MESSAGE value="Test that invalid move raises ValueError" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test that invalid move raises ValueError" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/main.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Test that invalid move with too high row and column values raises IndexError" />
+    <MESSAGE value="Initial game loop with very basic functionality. Screen is created and can be closed. New game function is triggered. Mouseclick is registered and triggers function to make a move." />
+    <MESSAGE value="Display background is the right color" />
+    <MESSAGE value="Header box and welcome text" />
+    <MESSAGE value="Background with game board created" />
+    <MESSAGE value="registration of row and column clicked" />
+    <MESSAGE value="Converted to index starting from 0" />
+    <MESSAGE value="Move only triggers when clicked on the board, not when header rectangle is clicked" />
+    <MESSAGE value="Detects game over and starts new game immediately" />
+    <MESSAGE value="Raises custom GameOverError when player tries to move after the game is already decided" />
+    <MESSAGE value="Go back and forth between drawing circles and crosses" />
+    <MESSAGE value="Draws a circle" />
+    <MESSAGE value="Draws a cross for player 2" />
+    <MESSAGE value="Working base game." />
+    <MESSAGE value="added some comments" />
+    <MESSAGE value="Minor improvements" />
+    <MESSAGE value="fixed test for move after end of game." />
+    <MESSAGE value="Starts new game after game over and displays full screen message to inform user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starts new game after game over and displays full screen message to inform user" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Tictactoe$test.coverage" NAME="test Coverage Results" MODIFIED="1721419602110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Tictactoe$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1721415473843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/Tictactoe$.coverage" NAME=" Coverage Results" MODIFIED="1721470753793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Tictactoe$tictactoe_mechanics.coverage" NAME="tictactoe_mechanics Coverage Results" MODIFIED="1721470208278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Tictactoe$.coverage" NAME=" Coverage Results" MODIFIED="1721503176693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Tictactoe$main.coverage" NAME="main Coverage Results" MODIFIED="1721504296217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Tictactoe$tictactoe_mechanics.coverage" NAME="tictactoe_mechanics Coverage Results" MODIFIED="1721486338855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
