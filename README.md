@@ -15,8 +15,6 @@ The purpose of this project is to demonstrate proficiency in Python programming 
 
 -Simple and intuitive design
 
--Highlighting the winning combination
-
 ## Requirements
 
 -Python 3.x
