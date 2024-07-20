@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="Display background is the right color">
+    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="Header box and welcome text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
@@ -336,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721473946796</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Header box and welcome text">
+      <option name="closed" value="true" />
+      <created>1721479193652</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721479193652</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,13 +387,14 @@
     <MESSAGE value="Test that invalid move with too high row and column values raises IndexError" />
     <MESSAGE value="Initial game loop with very basic functionality. Screen is created and can be closed. New game function is triggered. Mouseclick is registered and triggers function to make a move." />
     <MESSAGE value="Display background is the right color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Display background is the right color" />
+    <MESSAGE value="Header box and welcome text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Header box and welcome text" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Tictactoe$test.coverage" NAME="test Coverage Results" MODIFIED="1721419602110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Tictactoe$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1721415473843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Tictactoe$.coverage" NAME=" Coverage Results" MODIFIED="1721470843821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Tictactoe$main.coverage" NAME="main Coverage Results" MODIFIED="1721479120620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Tictactoe$main.coverage" NAME="main Coverage Results" MODIFIED="1721479876248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Tictactoe$tictactoe_mechanics.coverage" NAME="tictactoe_mechanics Coverage Results" MODIFIED="1721470208278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
