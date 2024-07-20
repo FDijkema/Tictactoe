@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="test for a game that ends undecided">
+    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="Game ends in draw after maximum number of moves has been made without a winner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe_mechanics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe_mechanics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_mechanics.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_mechanics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,7 @@
       <updated>1721395594115</updated>
       <workItem from="1721395599657" duration="1810000" />
       <workItem from="1721397465555" duration="12675000" />
-      <workItem from="1721461803834" duration="2778000" />
+      <workItem from="1721461803834" duration="4916000" />
     </task>
     <task id="LOCAL-00001" summary="Basic folder structure and creation of initial files">
       <option name="closed" value="true" />
@@ -262,7 +261,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721465025766</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Changed winner of draw to &quot;Draw&quot; instead of None for more consistent behaviour">
+      <option name="closed" value="true" />
+      <created>1721466693180</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721466693180</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Game ends in draw after maximum number of moves has been made without a winner">
+      <option name="closed" value="true" />
+      <created>1721466745786</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1721466745786</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +311,9 @@
     <MESSAGE value="Test for invalid move" />
     <MESSAGE value="Todos for a test to check undecided game" />
     <MESSAGE value="test for a game that ends undecided" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for a game that ends undecided" />
+    <MESSAGE value="Changed winner of draw to &quot;Draw&quot; instead of None for more consistent behaviour" />
+    <MESSAGE value="Game ends in draw after maximum number of moves has been made without a winner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Game ends in draw after maximum number of moves has been made without a winner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -311,6 +328,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Tictactoe$test.coverage" NAME="test Coverage Results" MODIFIED="1721419602110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Tictactoe$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1721415473843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/Tictactoe$.coverage" NAME=" Coverage Results" MODIFIED="1721466630075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Tictactoe$.coverage" NAME=" Coverage Results" MODIFIED="1721466646017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
 </project>
