@@ -44,12 +44,14 @@ def test_game_player_2_wins():
     assert my_game.game_over
     assert my_game.winner == "Player 2"
 
+
 def test_invalid_move():
     my_game = TictactoeGame()
     my_game.move(1, 2)  # player 01
     my_game.move(1, 2)  # player 02 makes an invalid move
     assert np.array_equal(my_game.state, np.array([[0, 1, 0], [0, 0, 0], [0, 0, 0]]))
     assert my_game.next_to_move == -1
+
 
 def test_move_after_end_of_game():
     my_game = TictactoeGame()
@@ -64,6 +66,7 @@ def test_move_after_end_of_game():
     assert my_game.winner == "Player 1"
     assert my_game.next_to_move == -1
 
+
 def test_game_ends_undecided():
     my_game = TictactoeGame()
     my_game.move(2, 2)  # player 01
@@ -73,8 +76,8 @@ def test_game_ends_undecided():
     my_game.move(2, 3)  # player 01
     my_game.move(2, 1)  # player 02
     my_game.move(1, 2)  # player 01
-    my_game.move(3, 1)  # player 02
+    my_game.move(3, 2)  # player 02
     my_game.move(3, 1)  # player 01
     assert np.array_equal(my_game.state, np.array([[1, 1, -1], [-1, 1, 1], [1, -1, -1]]))
     assert my_game.game_over
-    assert my_game.winner is None
+    assert my_game.winner is "Draw"
