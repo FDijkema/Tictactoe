@@ -56,7 +56,10 @@ def make_a_move(x, y):
 
 def draw_circle(row, column):
     print("circle drawn")
-    # pygame.draw.circle(screen, "black", (column, row), 10)
+    radius = (square_size / 2 - 2 * margin)
+    circlex = 100 + 200 * column
+    circley = top_of_board + 100 + 200 * row
+    pygame.draw.circle(screen, "wheat4", (circlex, circley), radius, width = 10)
 
 
 def draw_cross(row, column):
