@@ -40,8 +40,8 @@ def make_a_move(x, y):
     col = int(x/200)
     row = int((y-100)/200)
     # advance the game
+    symbol = my_game.next_to_move
     try:
-        symbol = my_game.next_to_move
         my_game.move(row, col)
     except ValueError:
         print("Seems like somebody already made a move on that field. Choose a different field.")
@@ -49,6 +49,7 @@ def make_a_move(x, y):
     except GameOverError:
         print("Game over! You can't move anymore.")
         return
+    # place a symbol on the board
     draw_shape[symbol](row, col)
     print("move made")
     print("row: {}, column: {}".format(row, col))
