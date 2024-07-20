@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="changed TictactoeGame class name to be consistent with naming conventions">
+    <list default="true" id="490347d4-93cd-4fcf-b88c-982abaec774d" name="Changes" comment="Game ends in draw after maximum number of moves has been made without a winner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe_mechanics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe_mechanics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_mechanics.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_mechanics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -47,19 +51,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for test_mechanics.test_invalid_move.executor": "Run",
     "Python tests.Python tests in test.executor": "Run",
     "Python tests.Python tests in test_infrastructure.executor": "Run",
     "Python.scratch.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "more__thorough__tests",
     "last_opened_file_path": "D:/Fenne/PycharmProjects/Tictactoe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -68,7 +73,23 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests in test">
+    <configuration name="Python tests for test_mechanics.test_invalid_move" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mechanics.test_invalid_move&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -87,7 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_infrastructure" />
+        <item itemvalue="Python tests.Python tests in test" />
+        <item itemvalue="Python tests.Python tests for test_mechanics.test_invalid_move" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +130,8 @@
       <option name="presentableId" value="Default" />
       <updated>1721395594115</updated>
       <workItem from="1721395599657" duration="1810000" />
-      <workItem from="1721397465555" duration="12423000" />
+      <workItem from="1721397465555" duration="12675000" />
+      <workItem from="1721461803834" duration="4916000" />
     </task>
     <task id="LOCAL-00001" summary="Basic folder structure and creation of initial files">
       <option name="closed" value="true" />
@@ -174,13 +197,105 @@
       <option name="project" value="LOCAL" />
       <updated>1721421676679</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="working basic gameplay">
+      <option name="closed" value="true" />
+      <created>1721426845601</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721426845601</updated>
+    </task>
+    <task id="LOCAL-00010" summary="commented out test for win in next round for now, since not yet implemented">
+      <option name="closed" value="true" />
+      <created>1721426883841</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721426883841</updated>
+    </task>
+    <task id="LOCAL-00011" summary="spelling improvement in comment">
+      <option name="closed" value="true" />
+      <created>1721427006323</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1721427006323</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Slight improvement in message for invalid move">
+      <option name="closed" value="true" />
+      <created>1721461884794</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721461884794</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Slight improvement in message for invalid move">
+      <option name="closed" value="true" />
+      <created>1721462023406</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1721462023406</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Test for invalid move">
+      <option name="closed" value="true" />
+      <created>1721462226159</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721462226159</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Todos for a test to check undecided game">
+      <option name="closed" value="true" />
+      <created>1721462691993</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721462691993</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test for a game that ends undecided">
+      <option name="closed" value="true" />
+      <created>1721465025766</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1721465025766</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changed winner of draw to &quot;Draw&quot; instead of None for more consistent behaviour">
+      <option name="closed" value="true" />
+      <created>1721466693180</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721466693180</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Game ends in draw after maximum number of moves has been made without a winner">
+      <option name="closed" value="true" />
+      <created>1721466745786</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1721466745786</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Basic folder structure and creation of initial files" />
     <MESSAGE value="__init__ method and make_make method for Tictactoe game infrastructure" />
     <MESSAGE value="Infrastructure tests" />
@@ -189,7 +304,16 @@
     <MESSAGE value="added todos for needed features" />
     <MESSAGE value="check for empty field, otherwise invalid move" />
     <MESSAGE value="changed TictactoeGame class name to be consistent with naming conventions" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed TictactoeGame class name to be consistent with naming conventions" />
+    <MESSAGE value="working basic gameplay" />
+    <MESSAGE value="commented out test for win in next round for now, since not yet implemented" />
+    <MESSAGE value="spelling improvement in comment" />
+    <MESSAGE value="Slight improvement in message for invalid move" />
+    <MESSAGE value="Test for invalid move" />
+    <MESSAGE value="Todos for a test to check undecided game" />
+    <MESSAGE value="test for a game that ends undecided" />
+    <MESSAGE value="Changed winner of draw to &quot;Draw&quot; instead of None for more consistent behaviour" />
+    <MESSAGE value="Game ends in draw after maximum number of moves has been made without a winner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Game ends in draw after maximum number of moves has been made without a winner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -198,17 +322,12 @@
           <url>file://$PROJECT_DIR$/src/main.py</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/test_mechanics.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Tictactoe$test.coverage" NAME="test Coverage Results" MODIFIED="1721419602110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Tictactoe$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1721415473843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/Tictactoe$.coverage" NAME=" Coverage Results" MODIFIED="1721426631532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Tictactoe$.coverage" NAME=" Coverage Results" MODIFIED="1721466646017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
 </project>
