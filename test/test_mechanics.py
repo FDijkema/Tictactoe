@@ -55,6 +55,14 @@ def test_invalid_move():
     assert my_game.next_to_move == -1
 
 
+def test_invalid_move_02():
+    my_game = TictactoeGame()
+    with pytest.raises(IndexError):
+        my_game.move(4, 4)  # player 01 makes an invalid move
+    assert np.array_equal(my_game.state, np.array([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+    assert my_game.next_to_move == 1
+
+
 def test_move_after_end_of_game():
     my_game = TictactoeGame()
     my_game.move(1, 1)  # player 01
