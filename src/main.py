@@ -69,4 +69,8 @@ while True:
                 make_a_move(x, y)
             else:
                 pass    # user clicked on something else
+    # declare winner and ask to restart
+    if my_game.game_over:
+        print("Game over.")
+        new_game()
     pygame.display.flip()
