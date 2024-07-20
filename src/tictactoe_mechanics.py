@@ -67,7 +67,7 @@ class TictactoeGame:
             raise IndexError("Your move does not fit on the Tictactoe board."
                              "Make sure row and column indices are between 1 and 3.")
         if self.game_over:    # can't make a move after the game ended
-            raise Exception("This game is already decided. You can't play anymore.")
+            raise GameOverError("This game is already decided. You can't play anymore.")
         elif self.state[row, column] == 0:    # check if the field is empty
             self.state[row, column] = self.next_to_move    # place player symbol in the right field
             self.number_of_moves += 1
@@ -111,3 +111,7 @@ class TictactoeGame:
         #    return True    # also signal that the game has been won already
         else:
             return False
+
+
+class GameOverError(Exception):
+    pass

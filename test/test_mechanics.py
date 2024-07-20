@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from src.tictactoe_mechanics import TictactoeGame
+from src.tictactoe_mechanics import TictactoeGame, GameOverError
 
 
 def test_game_initialization():
@@ -70,7 +70,7 @@ def test_move_after_end_of_game():
     my_game.move(0, 1)  # player 01
     my_game.move(1, 1)  # player 02
     my_game.move(0, 2)  # player 01 wins
-    with pytest.raises(Exception):
+    with pytest.raises(GameOverError):
         my_game.move(2, 3)  # player 02 should not win
     assert np.array_equal(my_game.state, np.array([[1, 1, 1], [-1, -1, 0], [0, 0, 0]]))
     assert my_game.game_over
