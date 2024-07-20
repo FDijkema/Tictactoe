@@ -1,27 +1,32 @@
+"""Run this script to play a game of Tic-tac-toe in a visual interface"""
+
 from src.tictactoe_mechanics import TictactoeGame, GameOverError
 import pygame
 
 
-def initialize_game():
+def initialize_and_welcome_players():
+    """fill the screen with background colour and write a welcome message for the players"""
     screen.fill("wheat3")
-    update_top_bar_message("Tic Tac Toe")
-    full_screen_message("Welcome to Tic Tac Toe!", 1000)
+    update_top_bar_message("Welcome to Tic Tac Toe!")
     create_empty_board()
+    pygame.display.flip()
+    pygame.time.wait(2000)
 
 
 def new_game():
-    print("new game started")
+    """empty the game board and start a new game"""
     create_empty_board()
-    update_top_bar_message("New game started. Press anywhere on the board to make the first move.")
+    update_top_bar_message("")
     # initiate game
     global my_game
     my_game = TictactoeGame()
+    update_top_bar_message("Next to move: {}".format(text_symbol[my_game.next_to_move]))
 
 
 def create_empty_board():
+    """"fill the lower half of the screen with an empty tictactoe board"""
     pygame.draw.rect(screen, "wheat3", pygame.Rect(0, top_of_board, width, height - top_of_board))
     pygame.draw.line(screen, "black", (0, 100), (width, 100), 5)
-    # board
     pygame.draw.line(screen, "wheat4",
                      (margin, top_of_board + square_size),
                      (width - margin, top_of_board + square_size), 10)
@@ -37,6 +42,7 @@ def create_empty_board():
 
 
 def update_top_bar_message(message):
+    """"write a message on the top part of the screen"""
     # empty top bar
     pygame.draw.rect(screen, "wheat4", pygame.Rect(0, 0, width, 100))
     pygame.draw.line(screen, "black", (0, 100), (width, 100), 5)
@@ -50,6 +56,7 @@ def update_top_bar_message(message):
 
 
 def full_screen_message(message, time):
+    """empty the lower part of the screen and write a message in the center"""
     # empty background
     pygame.draw.rect(screen, "wheat3", pygame.Rect(0, top_of_board, width, height - top_of_board))
     pygame.draw.line(screen, "black", (0, 100), (width, 100), 5)
@@ -64,6 +71,7 @@ def full_screen_message(message, time):
 
 
 def make_a_move(x, y):
+    """advance the game with one move and place a symbol on the board"""
     # determine what location on the board the user clicked
     col = int(x/200)
     row = int((y-100)/200)
@@ -72,19 +80,22 @@ def make_a_move(x, y):
     try:
         my_game.move(row, col)
     except ValueError:
-        print("Seems like somebody already made a move on that field. Choose a different field.")
+        pygame.time.wait(200)
+        update_top_bar_message("Invalid move. Try again.")
         return
     except GameOverError:
-        print("Game over! You can't move anymore.")
+        pygame.time.wait(200)
+        update_top_bar_message("Game Over. You can't move anymore.")
         return
     # place a symbol on the board
     draw_shape[symbol](row, col)
-    print("move made")
-    print("row: {}, column: {}".format(row, col))
+    pygame.display.flip()
+    pygame.time.wait(200)
+    update_top_bar_message("Next to move: {}".format(text_symbol[my_game.next_to_move]))
 
 
 def draw_circle(row, column):
-    print("circle drawn")
+    """draw a circle on the board at the indicated location"""
     radius = (square_size / 2 - 2 * margin)
     circlex = 100 + 200 * column
     circley = top_of_board + 100 + 200 * row
@@ -92,7 +103,7 @@ def draw_circle(row, column):
 
 
 def draw_cross(row, column):
-    print("cross drawn")
+    """draw a cross on the board at the indicated location"""
     # line 1
     line1_start_x = 3 * margin + 200 * column
     line1_start_y = top_of_board + 3 * margin + 200 * row
@@ -108,13 +119,12 @@ def draw_cross(row, column):
     pygame.draw.line(screen, "wheat4", (line2_start_x, line2_start_y), (line2_end_x, line2_end_y), 15)
 
 
+# start pygame so the attributes can be used
 pygame.init()
-
-# global settings for pygame
-## only mouse clicks are registered
+# global settings for pygame events
 pygame.event.set_allowed(None)
 pygame.event.set_allowed(pygame.MOUSEBUTTONDOWN)
-## screen size and caption
+# screen size and caption
 width = 600
 height = 700
 margin = 10
@@ -122,17 +132,19 @@ top_of_board = 100
 square_size = 200
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Tic-Tac-Toe')
-## define circle and cross
+# define which player is circle and which one is cross
 draw_shape = {
     1: draw_circle,
     -1: draw_cross
 }
+text_symbol = {
+    1: "O",
+    -1: "X"
+}
 
-
-# start first game
-initialize_game()
+# start the first game
+initialize_and_welcome_players()
 new_game()
-
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:    # user closed window and quit game
@@ -149,9 +161,9 @@ while True:
         pygame.display.flip()
         pygame.time.wait(500)
         if my_game.winner == "Draw":
-            full_screen_message("Game over! The game ended in a draw.", 1500)
+            full_screen_message("It's a draw!", 2000)
         else:
-            full_screen_message("{} won! Congratulations.".format(my_game.winner), 1500)
+            full_screen_message("Congratulations {}! You win!".format(my_game.winner), 2000)
         full_screen_message("Starting new game...", 1000)
         new_game()
     pygame.display.flip()
