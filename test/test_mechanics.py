@@ -66,15 +66,15 @@ def test_move_after_end_of_game():
 
 def test_game_ends_undecided():
     my_game = TictactoeGame()
-    # todo: write a game that ends undecided
-    my_game.move(1, 1)  # player 01
+    my_game.move(2, 2)  # player 01
     my_game.move(1, 3)  # player 02
+    my_game.move(1, 1)  # player 01
+    my_game.move(3, 3)  # player 02
+    my_game.move(2, 3)  # player 01
+    my_game.move(2, 1)  # player 02
     my_game.move(1, 2)  # player 01
-    my_game.move(2, 2)  # player 02
-    my_game.move(1, 3)  # player 01 wins
-    my_game.move(2, 3)  # player 02 should not win
-    # todo: fill out array with final game state
-    assert np.array_equal(my_game.state, np.array([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+    my_game.move(3, 1)  # player 02
+    my_game.move(3, 1)  # player 01
+    assert np.array_equal(my_game.state, np.array([[1, 1, -1], [-1, 1, 1], [1, -1, -1]]))
     assert my_game.game_over
     assert my_game.winner is None
-    # todo: can I check that something is written to the terminal?
