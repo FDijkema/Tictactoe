@@ -63,12 +63,12 @@ class TictactoeGame:
         column: int
             column index where the player will move (base 1)
         """
-        # convert to 0-base indexing
-        row = row - 1
-        column = column - 1
         if not (row in [1, 2, 3] and column in [1, 2, 3]):    # make sure the move fits on the board
             raise IndexError("Your move does not fit on the Tictactoe board."
                              "Make sure row and column indices are between 1 and 3.")
+        # convert to 0-base indexing
+        row = row - 1
+        column = column - 1
         if self.game_over:    # can't make a move after the game ended
             raise Exception("This game is already decided. You can't play anymore.")
         elif self.state[row, column] == 0:    # check if the field is empty
