@@ -49,7 +49,8 @@ def test_game_player_2_wins():
 def test_invalid_move():
     my_game = TictactoeGame()
     my_game.move(1, 2)  # player 01
-    my_game.move(1, 2)  # player 02 makes an invalid move
+    with pytest.raises(ValueError):
+        my_game.move(1, 2)  # player 02 makes an invalid move
     assert np.array_equal(my_game.state, np.array([[0, 1, 0], [0, 0, 0], [0, 0, 0]]))
     assert my_game.next_to_move == -1
 
