@@ -11,6 +11,7 @@ class TictactoeGame:
         self.next_to_move = 1    # 1 for player 1, -1 for player 2
         self.winner = None
         self.game_over = False
+        self.number_of_moves = 0
 
     def move(self, row, column):
         # convert to 0-base indexing
@@ -19,10 +20,19 @@ class TictactoeGame:
         if self.game_over:    # can't make a move after the game ended
             print("This game is already decided. You can't play anymore.")
         elif self.state[row, column] == 0:    # check if the field is empty
-            self.state[row, column] = self.next_to_move    # update the game state
-            if self.is_winning_move(row, column):
+            self.state[row, column] = self.next_to_move    # place player symbol in the right field
+            self.number_of_moves += 1
+            # evaluate the result of the move
+            if self.is_winning_move(row, column):    # game ends by win
+                self.game_over = True
                 self.winner = self.player_name[self.next_to_move]
                 print("Congratulations! {} wins!".format(self.winner))
+            elif self.number_of_moves == 9:   # game ends by draw
+                self.game_over = True
+                self.winner = "Draw"
+                print("No more moves to make. The game ends in a draw.")
+            else:    # just a normal move in the game
+                pass
             self.next_to_move *= -1    # advance the game to the next move
         else:   # can't make a move on filled field
             print("This move is invalid. Try an empty field instead.")
@@ -44,7 +54,6 @@ class TictactoeGame:
         #    diag_sum_left == 2,
         #    diag_sum_right == 2)
         if any(winning_configurations):
-            self.game_over = True
             return True
         # elif sum(close_calls) >= 2:    # win in the next round guaranteed
         #    self.game_over = True
