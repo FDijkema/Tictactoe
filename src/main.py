@@ -2,13 +2,24 @@ from src.tictactoe_mechanics import TictactoeGame, GameOverError
 import pygame
 
 
-def new_game():
-    # fill the screen
+def initialize_game():
     screen.fill("wheat3")
-    print("new game started")
+    update_top_bar_message("Tic Tac Toe")
+    full_screen_message("Welcome to Tic Tac Toe!", 1000)
+    create_empty_board()
 
-    # screen layout
-    pygame.draw.rect(screen, "wheat4", pygame.Rect(0, 0, width, 100))
+
+def new_game():
+    print("new game started")
+    create_empty_board()
+    update_top_bar_message("New game started. Press anywhere on the board to make the first move.")
+    # initiate game
+    global my_game
+    my_game = TictactoeGame()
+
+
+def create_empty_board():
+    pygame.draw.rect(screen, "wheat3", pygame.Rect(0, top_of_board, width, height - top_of_board))
     pygame.draw.line(screen, "black", (0, 100), (width, 100), 5)
     # board
     pygame.draw.line(screen, "wheat4",
@@ -24,15 +35,32 @@ def new_game():
                      (2 * square_size, top_of_board + margin),
                      (2 * square_size, height - margin), 10)
 
-    # write a welcome text
+
+def update_top_bar_message(message):
+    # empty top bar
+    pygame.draw.rect(screen, "wheat4", pygame.Rect(0, 0, width, 100))
+    pygame.draw.line(screen, "black", (0, 100), (width, 100), 5)
+    # print text
     font = pygame.font.Font('freesansbold.ttf', 32)
-    text = font.render('Welcome to Tic-tac-toe', True, "black")
+    text = font.render(message, True, "black")
     text_rect = text.get_rect(center=(width / 2, 50))
     screen.blit(text, text_rect)
+    # update
+    pygame.display.flip()
 
-    # initiate game
-    global my_game
-    my_game = TictactoeGame()
+
+def full_screen_message(message, time):
+    # empty background
+    pygame.draw.rect(screen, "wheat3", pygame.Rect(0, top_of_board, width, height - top_of_board))
+    pygame.draw.line(screen, "black", (0, 100), (width, 100), 5)
+    # text
+    font = pygame.font.Font('freesansbold.ttf', 32)
+    text = font.render(message, True, "black")
+    text_rect = text.get_rect(center=(width / 2, height / 2))
+    screen.blit(text, text_rect)
+    # wait and update
+    pygame.display.flip()
+    pygame.time.wait(time)
 
 
 def make_a_move(x, y):
@@ -102,6 +130,7 @@ draw_shape = {
 
 
 # start first game
+initialize_game()
 new_game()
 
 while True:
@@ -117,6 +146,12 @@ while True:
                 pass    # user clicked on something else
     # declare winner and ask to restart
     if my_game.game_over:
-        print("Game over.")
-        # new_game()
+        pygame.display.flip()
+        pygame.time.wait(500)
+        if my_game.winner == "Draw":
+            full_screen_message("Game over! The game ended in a draw.", 1500)
+        else:
+            full_screen_message("{} won! Congratulations.".format(my_game.winner), 1500)
+        full_screen_message("Starting new game...", 1000)
+        new_game()
     pygame.display.flip()
