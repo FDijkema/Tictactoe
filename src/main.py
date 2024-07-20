@@ -1,6 +1,4 @@
-# Example file showing a circle moving on screen
-import sys
-
+from src.tictactoe_mechanics import TictactoeGame
 import pygame
 
 
@@ -26,17 +24,23 @@ def new_game():
                      (2 * square_size, top_of_board + margin),
                      (2 * square_size, height - margin), 10)
 
-
     # write a welcome text
     font = pygame.font.Font('freesansbold.ttf', 32)
     text = font.render('Welcome to Tic-tac-toe', True, "black")
     text_rect = text.get_rect(center=(width / 2, 50))
     screen.blit(text, text_rect)
-    # create boxes to make a board
+
+    # initiate game
+    my_game = TictactoeGame()
 
 def make_a_move():
+    pos = pygame.mouse.get_pos()
+    x, y = pos
+    col = int(x/200)
+    row = int((y-100)/200)
+
     print("move made")
-    # pygame.Rect.collidepoint
+    print("row: {}, column: {}".format(row, col))
 
 # pygame setup
 pygame.init()
@@ -59,7 +63,5 @@ while True:
             pygame.quit()
             quit()
         elif event.type == pygame.MOUSEBUTTONDOWN:    # used clicked on something in the window
-            pos = pygame.mouse.get_pos()
-            # make a move
             make_a_move()
     pygame.display.flip()
