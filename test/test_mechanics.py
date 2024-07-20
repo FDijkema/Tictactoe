@@ -44,5 +44,9 @@ def test_game_player_2_wins():
     assert my_game.game_over
     assert my_game.winner == "Player 2"
 
-#def test_invalid_move():
-    # todo: add a test to check if invalid moves are processed correctly
+def test_invalid_move():
+    my_game = TictactoeGame()
+    my_game.move(1, 2)  # player 01
+    my_game.move(1, 2)  # player 02
+    assert np.array_equal(my_game.state, np.array([[0, 1, 0], [0, 0, 0], [0, 0, 0]]))
+    assert my_game.next_to_move == -1
