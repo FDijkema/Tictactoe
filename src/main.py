@@ -6,7 +6,7 @@ import pygame
 
 def new_game():
     # fill the screen
-    screen.fill("white")
+    screen.fill("wheat3")
     print("new game started")
     # write a welcome text
     # create boxes to make a board
@@ -34,3 +34,4 @@ while True:
             pos = pygame.mouse.get_pos()
             # make a move
             make_a_move()
+    pygame.display.flip()
