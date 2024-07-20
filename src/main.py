@@ -114,5 +114,5 @@ while True:
     # declare winner and ask to restart
     if my_game.game_over:
         print("Game over.")
-        new_game()
+        # new_game()
     pygame.display.flip()
