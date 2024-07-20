@@ -1,4 +1,4 @@
-from src.tictactoe_mechanics import TictactoeGame
+from src.tictactoe_mechanics import TictactoeGame, GameOverError
 import pygame
 
 
@@ -36,19 +36,42 @@ def new_game():
 
 
 def make_a_move(x, y):
+    # determine what location on the board the user clicked
     col = int(x/200)
     row = int((y-100)/200)
-    my_game.move(row, col)
+    # advance the game
+    try:
+        symbol = my_game.next_to_move
+        my_game.move(row, col)
+    except ValueError:
+        print("Seems like somebody already made a move on that field. Choose a different field.")
+        return
+    except GameOverError:
+        print("Game over! You can't move anymore.")
+        return
+    draw_shape[symbol](row, col)
     print("move made")
     print("row: {}, column: {}".format(row, col))
 
 
-# pygame setup
+def draw_circle(row, column):
+    print("circle drawn")
+    # pygame.draw.circle(screen, "black", (column, row), 10)
+
+
+def draw_cross(row, column):
+    print("cross drawn")
+    # pygame.draw.line(screen, "black", (row, column), (column, row), 5)
+    # pygame.draw.line(screen, "black", (row, column), (column, row), 5)
+
+
 pygame.init()
+
 # global settings for pygame
+## only mouse clicks are registered
 pygame.event.set_allowed(None)
 pygame.event.set_allowed(pygame.MOUSEBUTTONDOWN)
-
+## screen size and caption
 width = 600
 height = 700
 margin = 10
@@ -56,6 +79,14 @@ top_of_board = 100
 square_size = 200
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Tic-Tac-Toe')
+## define circle and cross
+draw_shape = {
+    1: draw_circle,
+    -1: draw_cross
+}
+
+
+# start first game
 new_game()
 
 while True:
