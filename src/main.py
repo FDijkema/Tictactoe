@@ -31,16 +31,17 @@ def new_game():
     screen.blit(text, text_rect)
 
     # initiate game
+    global my_game
     my_game = TictactoeGame()
 
-def make_a_move():
-    pos = pygame.mouse.get_pos()
-    x, y = pos
+
+def make_a_move(x, y):
     col = int(x/200)
     row = int((y-100)/200)
-
+    my_game.move(row, col)
     print("move made")
     print("row: {}, column: {}".format(row, col))
+
 
 # pygame setup
 pygame.init()
@@ -62,6 +63,10 @@ while True:
         if event.type == pygame.QUIT:    # user closed window and quit game
             pygame.quit()
             quit()
-        elif event.type == pygame.MOUSEBUTTONDOWN:    # used clicked on something in the window
-            make_a_move()
+        elif event.type == pygame.MOUSEBUTTONDOWN:    # user clicked on something in the window
+            x, y = pygame.mouse.get_pos()
+            if y > 100:    # user clicked on the board
+                make_a_move(x, y)
+            else:
+                pass    # user clicked on something else
     pygame.display.flip()
